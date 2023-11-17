@@ -15,8 +15,12 @@
 
 body {
   font-family: "Lato", sans-serif;
-  overflow-x: hidden !important;
   color: white;
+}
+
+.root {
+  overflow-x: hidden;
+  position: relative;
 }
 
 header {

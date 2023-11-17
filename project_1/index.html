@@ -17,302 +17,306 @@
 </head>
 
 <body>
-  <header>
-    <div class="header_container">
-      <nav class="main_nav">
-        <div class="header_logo">
+  <div class="root">
+    <header>
+      <div class="header_container">
+        <nav class="main_nav">
+          <div class="header_logo">
+            <img src="images/logo.svg" alt="main logo of the company" />
+          </div>
+          <div class="header_nav">
+            <span class="header_nav_item selected">Strona główna</span>
+            <span class="header_nav_item">Nasze piwa</span>
+            <span class="header_nav_item">Kontakt</span>
+            <span class="header_nav_item">O nas</span>
+          </div>
+          <div class="header_nav_burger">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="header_menu_bg">
+            <div class="header_menu_bg_exit_btn">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+        </nav>
+        <div class="header_contact">
+          <span class="header_contact_item"><i class="fa-solid fa-phone"></i>+48 111 222 333</span>
+          <span class="header_contact_item"><i class="fa-solid fa-location-dot"></i>ul. Piwna 69, Browarów,
+            Polska</span>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="hero_container">
+        <div class="hero_background"></div>
+        <span class="hero_text">
+          Nasze piwa to dzieło pasji i rzemieślniczej precyzji. Każda kropla
+          to efekt starannej selekcji składników najwyższej jakości oraz
+          troski o każdy etap procesu warzenia. W każdym łyku zaklęta jest
+          historia naszej społeczności, pełna lokalnych inspiracji i
+          unikalnych smaków.
+        </span>
+        <div class="carousel">
+          <ul class="carousel_slides">
+            <li class="slide">
+              <img src="images/hero_img-1.jpg" alt="Random nature photo" />
+            </li>
+            <li class="slide">
+              <img src="images/hero_img-2.jpg" alt="Random nature photo" />
+            </li>
+            <li class="slide">
+              <img src="images/hero_img-3.jpg" alt="Random nature photo" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="features_container">
+        <div class="features_title">
+          <h2>Tradycja i jakość browaru</h2>
+        </div>
+
+        <div class="features_ft">
+          <div class="features_ft_text">
+            <div class="features_ft_title">
+              <h3>Najwyższa Jakość Składników:</h3>
+            </div>
+            <div class="features_ft_desc">
+              <p>
+                W naszym browarze kładziemy ogromny nacisk na jakość
+                składników. Korzystamy wyłącznie z najwyższej jakości słodów,
+                chmieli i drożdży, aby zapewnić naszym piwom niepowtarzalny
+                smak i aromat
+              </p>
+            </div>
+          </div>
+
+          <div class="features_ft_img">
+            <img src="./images/features_hop.svg" alt="hop svg" />
+          </div>
+        </div>
+
+        <div class="features_ft">
+          <div class="features_ft_text">
+            <div class="features_ft_title">
+              <h3>Strzeżone Rodzinne Receptury</h3>
+            </div>
+            <div class="features_ft_desc">
+              <p>
+                Nasze piwa opierają się na starannie strzeżonych recepturach,
+                przekazywanych z pokolenia na pokolenie. Tradycyjne metody
+                warzenia łączymy z nowoczesnym podejściem, tworząc unikalne i
+                niezapomniane piwa
+              </p>
+            </div>
+          </div>
+          <div class="features_ft_img">
+            <img src="./images/features_beer.svg" alt="hop svg" />
+          </div>
+        </div>
+
+        <div class="features_ft">
+          <div class="features_ft_text">
+            <div class="features_ft_title">
+              <h3>Lokalna Współpraca</h3>
+            </div>
+            <div class="features_ft_desc">
+              <p>
+                Współpracujemy z lokalnymi dostawcami i rolnikami, wspierając
+                naszą społeczność. To dla nas ważne, aby nasze piwo nie tylko
+                smakowało wyjątkowo, ale także przyczyniało się do rozwoju
+                lokalnej gospodarki
+              </p>
+            </div>
+          </div>
+          <div class="features_ft_img">
+            <img src="./images/features_handshake.svg" alt="hop svg" />
+          </div>
+        </div>
+
+        <div class="features_ft">
+          <div class="features_ft_text">
+            <div class="features_ft_title">
+              <h3>Zrównoważona Produkcja</h3>
+            </div>
+            <div class="features_ft_desc">
+              <p>
+                Dbamy o naszą planetę. Nasza produkcja oparta jest na
+                zrównoważonych praktykach, redukując ślad węglowy i
+                minimalizując wpływ na środowisko. Piwo, które pijesz, wspiera
+                ekologię!
+              </p>
+            </div>
+          </div>
+          <div class="features_ft_img">
+            <img src="./images/features_barley.svg" alt="hop svg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="beers_container">
+        <div class="beers_title">
+          <h2>Nasze najpopularniejsze piwa</h2>
+        </div>
+
+        <div class="beers_imgs">
+          <div class="beer_card">
+            <div class="beer_card_img">
+              <img src="./images/beer_1.jpg" alt="beer photo" />
+            </div>
+            <div class="beer_card_details">
+              <h3>BudLight</h3>
+              <ul>
+                <li>
+                  <div class="left">
+                    <i class="fa-solid fa-beer-mug-empty"></i> Rodzaj:
+                  </div>
+                  <div class="right">Jasne</div>
+                </li>
+                <li>
+                  <div class="left">
+                    <i class="fa-solid fa-percent"></i> Alkohol:
+                  </div>
+                  <div class="right">4.2%</div>
+                </li>
+                <li>
+                  <div class="left">
+                    <i class="fa-solid fa-face-grin-tongue-squint"></i> IBU:
+                  </div>
+                  <div class="right">9</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="beer_card">
+            <div class="beer_card_img">
+              <img src="./images/beer_2.jpg" alt="beer photo" />
+            </div>
+            <div class="beer_card_details">
+              <h3>Bintanc</h3>
+              <ul>
+                <li>
+                  <div class="left">
+                    <i class="fa-solid fa-beer-mug-empty"></i> Rodzaj:
+                  </div>
+                  <div class="right">Jasne</div>
+                </li>
+                <li>
+                  <div class="left">
+                    <i class="fa-solid fa-percent"></i> Alkohol:
+                  </div>
+                  <div class="right">5.3%</div>
+                </li>
+                <li>
+                  <div class="left">
+                    <i class="fa-solid fa-face-grin-tongue-squint"></i> IBU:
+                  </div>
+                  <div class="right">6</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="beer_card">
+            <div class="beer_card_img">
+              <img src="./images/beer_3.jpg" alt="beer photo" />
+            </div>
+            <div class="beer_card_details">
+              <h3>DuffBeer</h3>
+              <ul>
+                <li>
+                  <div class="left">
+                    <i class="fa-solid fa-beer-mug-empty"></i> Rodzaj:
+                  </div>
+                  <div class="right">Ciemne</div>
+                </li>
+                <li>
+                  <div class="left">
+                    <i class="fa-solid fa-percent"></i> Alkohol:
+                  </div>
+                  <div class="right">6.0%</div>
+                </li>
+                <li>
+                  <div class="left">
+                    <i class="fa-solid fa-face-grin-tongue-squint"></i> IBU:
+                  </div>
+                  <div class="right">15</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="beer_card">
+            <div class="beer_card_img">
+              <img src="./images/beer_4.jpg" alt="beer photo" />
+            </div>
+            <div class="beer_card_details">
+              <h3>Budweiser</h3>
+              <ul>
+                <li>
+                  <div class="left">
+                    <i class="fa-solid fa-beer-mug-empty"></i> Rodzaj:
+                  </div>
+                  <div class="right">Jasne</div>
+                </li>
+                <li>
+                  <div class="left">
+                    <i class="fa-solid fa-percent"></i> Alkohol:
+                  </div>
+                  <div class="right">5.8%</div>
+                </li>
+                <li>
+                  <div class="left">
+                    <i class="fa-solid fa-face-grin-tongue-squint"></i> IBU:
+                  </div>
+                  <div class="right">13</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer_container">
+        <div class="footer_subcontainer">
+          <div class="footer_socials">
+            <span class="footer_section_title">Obserwuj nas</span>
+            <ul>
+              <li><i class="fa-brands fa-facebook"></i>Facebook</li>
+              <li><i class="fa-brands fa-instagram"></i>Instagram</li>
+              <li><i class="fa-brands fa-youtube"></i>YouTube</li>
+              <li><i class="fa-brands fa-twitter"></i>Twitter</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer_logo">
           <img src="images/logo.svg" alt="main logo of the company" />
         </div>
-        <div class="header_nav">
-          <span class="header_nav_item selected">Strona główna</span>
-          <span class="header_nav_item">Nasze piwa</span>
-          <span class="header_nav_item">Kontakt</span>
-          <span class="header_nav_item">O nas</span>
-        </div>
-        <div class="header_nav_burger">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-        <div class="header_menu_bg">
-          <div class="header_menu_bg_exit_btn">
-            <i class="fa-solid fa-xmark"></i>
-          </div>
-        </div>
-      </nav>
-      <div class="header_contact">
-        <span class="header_contact_item"><i class="fa-solid fa-phone"></i>+48 111 222 333</span>
-        <span class="header_contact_item"><i class="fa-solid fa-location-dot"></i>ul. Piwna 69, Browarów,
-          Polska</span>
-      </div>
-    </div>
-  </header>
-  <section>
-    <div class="hero_container">
-      <div class="hero_background"></div>
-      <span class="hero_text">
-        Nasze piwa to dzieło pasji i rzemieślniczej precyzji. Każda kropla to
-        efekt starannej selekcji składników najwyższej jakości oraz troski o
-        każdy etap procesu warzenia. W każdym łyku zaklęta jest historia
-        naszej społeczności, pełna lokalnych inspiracji i unikalnych smaków.
-      </span>
-      <div class="carousel">
-        <ul class="carousel_slides">
-          <li class="slide">
-            <img src="images/hero_img-1.jpg" alt="Random nature photo" />
-          </li>
-          <li class="slide">
-            <img src="images/hero_img-2.jpg" alt="Random nature photo" />
-          </li>
-          <li class="slide">
-            <img src="images/hero_img-3.jpg" alt="Random nature photo" />
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <section>
-    <div class="features_container">
-      <div class="features_title">
-        <h2>Tradycja i jakość browaru</h2>
-      </div>
 
-      <div class="features_ft">
-        <div class="features_ft_text">
-          <div class="features_ft_title">
-            <h3>Najwyższa Jakość Składników:</h3>
-          </div>
-          <div class="features_ft_desc">
-            <p>
-              W naszym browarze kładziemy ogromny nacisk na jakość składników.
-              Korzystamy wyłącznie z najwyższej jakości słodów, chmieli i
-              drożdży, aby zapewnić naszym piwom niepowtarzalny smak i aromat
-            </p>
-          </div>
-        </div>
-
-        <div class="features_ft_img">
-          <img src="./images/features_hop.svg" alt="hop svg" />
-        </div>
-      </div>
-
-      <div class="features_ft">
-        <div class="features_ft_text">
-          <div class="features_ft_title">
-            <h3>Strzeżone Rodzinne Receptury</h3>
-          </div>
-          <div class="features_ft_desc">
-            <p>
-              Nasze piwa opierają się na starannie strzeżonych recepturach,
-              przekazywanych z pokolenia na pokolenie. Tradycyjne metody
-              warzenia łączymy z nowoczesnym podejściem, tworząc unikalne i
-              niezapomniane piwa
-            </p>
-          </div>
-        </div>
-        <div class="features_ft_img">
-          <img src="./images/features_beer.svg" alt="hop svg" />
-        </div>
-      </div>
-
-      <div class="features_ft">
-        <div class="features_ft_text">
-          <div class="features_ft_title">
-            <h3>Lokalna Współpraca</h3>
-          </div>
-          <div class="features_ft_desc">
-            <p>
-              Współpracujemy z lokalnymi dostawcami i rolnikami, wspierając
-              naszą społeczność. To dla nas ważne, aby nasze piwo nie tylko
-              smakowało wyjątkowo, ale także przyczyniało się do rozwoju
-              lokalnej gospodarki
-            </p>
-          </div>
-        </div>
-        <div class="features_ft_img">
-          <img src="./images/features_handshake.svg" alt="hop svg" />
-        </div>
-      </div>
-
-      <div class="features_ft">
-        <div class="features_ft_text">
-          <div class="features_ft_title">
-            <h3>Zrównoważona Produkcja</h3>
-          </div>
-          <div class="features_ft_desc">
-            <p>
-              Dbamy o naszą planetę. Nasza produkcja oparta jest na
-              zrównoważonych praktykach, redukując ślad węglowy i
-              minimalizując wpływ na środowisko. Piwo, które pijesz, wspiera
-              ekologię!
-            </p>
-          </div>
-        </div>
-        <div class="features_ft_img">
-          <img src="./images/features_barley.svg" alt="hop svg" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="beers_container">
-      <div class="beers_title">
-        <h2>Nasze najpopularniejsze piwa</h2>
-      </div>
-
-      <div class="beers_imgs">
-        <div class="beer_card">
-          <div class="beer_card_img">
-            <img src="./images/beer_1.jpg" alt="beer photo" />
-          </div>
-          <div class="beer_card_details">
-            <h3>BudLight</h3>
+        <div class="footer_subcontainer">
+          <div class="footer_contact">
+            <span class="footer_section_title">Skontaktuj się</span>
             <ul>
+              <li><i class="fa-solid fa-phone"></i> +48 111 222 333</li>
+              <li><i class="fa-solid fa-fax"></i> +48 222 111 333</li>
               <li>
-                <div class="left">
-                  <i class="fa-solid fa-beer-mug-empty"></i> Rodzaj:
-                </div>
-                <div class="right">Jasne</div>
+                <i class="fa-solid fa-location-dot"></i>ul. Piwna 69,
+                Browarów, Polska
               </li>
-              <li>
-                <div class="left">
-                  <i class="fa-solid fa-percent"></i> Alkohol:
-                </div>
-                <div class="right">4.2%</div>
-              </li>
-              <li>
-                <div class="left">
-                  <i class="fa-solid fa-face-grin-tongue-squint"></i> IBU:
-                </div>
-                <div class="right">9</div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="beer_card">
-          <div class="beer_card_img">
-            <img src="./images/beer_2.jpg" alt="beer photo" />
-          </div>
-          <div class="beer_card_details">
-            <h3>Bintanc</h3>
-            <ul>
-              <li>
-                <div class="left">
-                  <i class="fa-solid fa-beer-mug-empty"></i> Rodzaj:
-                </div>
-                <div class="right">Jasne</div>
-              </li>
-              <li>
-                <div class="left">
-                  <i class="fa-solid fa-percent"></i> Alkohol:
-                </div>
-                <div class="right">5.3%</div>
-              </li>
-              <li>
-                <div class="left">
-                  <i class="fa-solid fa-face-grin-tongue-squint"></i> IBU:
-                </div>
-                <div class="right">6</div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="beer_card">
-          <div class="beer_card_img">
-            <img src="./images/beer_3.jpg" alt="beer photo" />
-          </div>
-          <div class="beer_card_details">
-            <h3>DuffBeer</h3>
-            <ul>
-              <li>
-                <div class="left">
-                  <i class="fa-solid fa-beer-mug-empty"></i> Rodzaj:
-                </div>
-                <div class="right">Ciemne</div>
-              </li>
-              <li>
-                <div class="left">
-                  <i class="fa-solid fa-percent"></i> Alkohol:
-                </div>
-                <div class="right">6.0%</div>
-              </li>
-              <li>
-                <div class="left">
-                  <i class="fa-solid fa-face-grin-tongue-squint"></i> IBU:
-                </div>
-                <div class="right">15</div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="beer_card">
-          <div class="beer_card_img">
-            <img src="./images/beer_4.jpg" alt="beer photo" />
-          </div>
-          <div class="beer_card_details">
-            <h3>Budweiser</h3>
-            <ul>
-              <li>
-                <div class="left">
-                  <i class="fa-solid fa-beer-mug-empty"></i> Rodzaj:
-                </div>
-                <div class="right">Jasne</div>
-              </li>
-              <li>
-                <div class="left">
-                  <i class="fa-solid fa-percent"></i> Alkohol:
-                </div>
-                <div class="right">5.8%</div>
-              </li>
-              <li>
-                <div class="left">
-                  <i class="fa-solid fa-face-grin-tongue-squint"></i> IBU:
-                </div>
-                <div class="right">13</div>
-              </li>
+              <li><i class="fa-solid fa-envelope"></i>beer@beerhouse.pl</li>
             </ul>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer_container">
-      <div class="footer_subcontainer">
-        <div class="footer_socials">
-          <span class="footer_section_title">Obserwuj nas</span>
-          <ul>
-            <li><i class="fa-brands fa-facebook"></i>Facebook</li>
-            <li><i class="fa-brands fa-instagram"></i>Instagram</li>
-            <li><i class="fa-brands fa-youtube"></i>YouTube</li>
-            <li><i class="fa-brands fa-twitter"></i>Twitter</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer_logo">
-        <img src="images/logo.svg" alt="main logo of the company" />
-      </div>
-
-      <div class="footer_subcontainer">
-        <div class="footer_contact">
-          <span class="footer_section_title">Skontaktuj się</span>
-          <ul>
-            <li><i class="fa-solid fa-phone"></i> +48 111 222 333</li>
-            <li><i class="fa-solid fa-fax"></i> +48 222 111 333</li>
-            <li>
-              <i class="fa-solid fa-location-dot"></i>ul. Piwna 69, Browarów,
-              Polska
-            </li>
-            <li><i class="fa-solid fa-envelope"></i>beer@beerhouse.pl</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </body>
 
 </html>
