@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>BeerHouse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./../css/index.css" />
+  <link rel="stylesheet" href="./../css/contact.css" />
+  <script src="https://kit.fontawesome.com/18ab740b53.js" crossorigin="anonymous"></script>
+  <script src="./../js/menu.js" defer></script>
+  <script src="./../js/contact.js" defer></script>
+</head>
+
+<body>
+  <div class="root">
+    <header>
+      <div class="header_container">
+        <nav class="main_nav">
+          <div class="header_logo">
+            <img src="../images/logo.svg" alt="main logo of the company" />
+          </div>
+          <div class="header_nav">
+            <span class="header_nav_item"><a href="./../index.html">Strona główna</a></span>
+            <span class="header_nav_item">Nasze piwa</span>
+            <span class="header_nav_item"><a class="selected" href="contact.html">Kontakt</a></span>
+            <span class="header_nav_item">O nas</span>
+          </div>
+          <div class="header_nav_burger">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="header_menu_bg">
+            <div class="header_menu_bg_exit_btn">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+        </nav>
+        <div class="header_contact">
+          <span class="header_contact_item"><i class="fa-solid fa-phone"></i>+48 111 222 333</span>
+          <span class="header_contact_item"><i class="fa-solid fa-location-dot"></i>ul. Piwna 69, Browarów,
+            Polska</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="contact_form_container">
+      <form class="contact_form">
+        <input type="hidden" name="_captcha" value="false">
+        <label for="contact_form_email">Adres email</label>
+        <input type="email" placeholder="adam.nowak@wp.pl" name="contact_form_email" id="contact_form_email" />
+        <label for="contact_form_title">Tytuł wiadomości</label>
+        <input type="text" placeholder="np. Propozycja współpracy" name="contact_form_title" id="contact_form_title" />
+        <label for="contact_form_textarea">Treść widomości</label>
+        <textarea rows="7" id="contact_form_textarea" placeholder="Treść twojej wiadomości"></textarea>
+        <button type="submit" id="contact_form_submit">Wyślij</button>
+      </form>
+    </div>
+
+    <footer>
+      <div class="footer_container">
+        <div class="footer_subcontainer">
+          <div class="footer_socials">
+            <span class="footer_section_title">Obserwuj nas</span>
+            <ul>
+              <li><i class="fa-brands fa-facebook"></i>Facebook</li>
+              <li><i class="fa-brands fa-instagram"></i>Instagram</li>
+              <li><i class="fa-brands fa-youtube"></i>YouTube</li>
+              <li><i class="fa-brands fa-twitter"></i>Twitter</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer_logo">
+          <img src="../images/logo.svg" alt="main logo of the company" />
+        </div>
+
+        <div class="footer_subcontainer">
+          <div class="footer_contact">
+            <span class="footer_section_title">Skontaktuj się</span>
+            <ul>
+              <li><i class="fa-solid fa-phone"></i> +48 111 222 333</li>
+              <li><i class="fa-solid fa-fax"></i> +48 222 111 333</li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i>ul. Piwna 69,
+                Browarów, Polska
+              </li>
+              <li><i class="fa-solid fa-envelope"></i>beer@beerhouse.pl</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
