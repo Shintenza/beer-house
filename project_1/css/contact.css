@@ -12,6 +12,8 @@
   align-items: center;
   padding: 20px;
   min-height: 50vh;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .contact_form {

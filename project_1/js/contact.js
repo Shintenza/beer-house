@@ -84,7 +84,7 @@ class ContactFormHandler {
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
     if (!this.#emailAddress.match(validEmail)) {
-      this.#appendError(this.#emailElement, "invalid email address");
+      this.#appendError(this.#emailElement, "Niepoprawny adres email");
       this.#isCorrect = false;
       return;
     }
@@ -92,7 +92,7 @@ class ContactFormHandler {
     if (this.#messageTitle.length === 0) {
       this.#appendError(
         this.#titleElement,
-        "you have to provide a message title",
+        "Musisz wpisać jakiś tytuł wiadomości",
       );
       this.#isCorrect = false;
       return;
@@ -101,7 +101,7 @@ class ContactFormHandler {
     if (this.#messageContent.length === 0) {
       this.#appendError(
         this.#messageElement,
-        "you have to provide a message content",
+        "Musisz podać jakąś treść wiadomości",
       );
       this.#isCorrect = false;
       return;
