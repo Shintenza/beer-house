@@ -28,4 +28,47 @@ class CarouselHandler {
   }
 }
 
+class appearOnScroll {
+  #observer = null;
+  #elements = null;
+  #startingClass = "";
+
+  constructor(elementsName, startingClass) {
+    this.#elements = document.querySelectorAll(`.${elementsName}`);
+    this.#startingClass = startingClass;
+    this.#makeElementsHidden();
+    this.#createObserver();
+    this.#addObserverToElements();
+  }
+
+  #createObserver() {
+    this.#observer = new IntersectionObserver(
+      (entries) => {
+        console.log(entries);
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.toggle("show", entry.isIntersecting);
+            this.#observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 },
+    );
+  }
+
+  #addObserverToElements() {
+    this.#elements.forEach((element) => {
+      this.#observer.observe(element);
+    });
+  }
+
+  #makeElementsHidden() {
+    this.#elements.forEach((element) => {
+      element.classList.add(this.#startingClass);
+    });
+  }
+}
+
 const carouselHandler = new CarouselHandler("carousel_slides");
+const featuresAppear = new appearOnScroll("features_ft", "slide_from_left");
+const beersAppear = new appearOnScroll("beer_card", "slide_from_right");

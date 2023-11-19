@@ -1,0 +1,16 @@
+.slide_from_left {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: 800ms all ease-in-out;
+}
+
+.slide_from_right {
+  opacity: 0;
+  transform: translateX(50%);
+  transition: 800ms all ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
