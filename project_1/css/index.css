@@ -148,6 +148,29 @@ header a {
   position: relative;
 }
 
+.hero_img_3,
+.hero_img_2,
+.hero_img_1 {
+  width: 100%;
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero_img_1 {
+  background-image: url('./../images/hero_img-1.jpg');
+}
+
+.hero_img_2 {
+  background-image: url('./../images/hero_img-2.jpg');
+}
+
+.hero_img_3 {
+  background-image: url('./../images/hero_img-3.jpg');
+}
+
+
 .hero_background {
   position: absolute;
   top: 0;
@@ -180,6 +203,11 @@ header a {
 
 .carousel {
   position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel_slides {
   width: 100%;
   height: 100%;
 }

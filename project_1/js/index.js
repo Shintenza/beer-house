@@ -1,22 +1,31 @@
 const slidesList = document.querySelector(".carousel_slides");
 
-// Slides handler
-let currentSlide = 0;
-const avaliableSlides = [...slidesList.children];
+class CarouselHandler {
+  #avaliableSlides = [];
+  #currentSlide = 0;
+  #slidesList = null;
 
-const handleCarousel = () => {
-  const currentActiveElement = document.querySelector(".active_slide");
+  constructor(carouselClassName) {
+    this.#slidesList = document.querySelector(`.${carouselClassName}`);
+    this.#avaliableSlides = [...this.#slidesList.children];
 
-  if (currentActiveElement) {
-    currentActiveElement.classList.remove("active_slide");
+    this.#handleCarousel();
+    setInterval(this.#handleCarousel.bind(this), 7000);
   }
 
-  const currentSlideElement = avaliableSlides[currentSlide];
-  currentSlideElement.classList.add("active_slide");
+  #handleCarousel() {
+    const currentActiveElement = document.querySelector(".active_slide");
 
-  currentSlide = (currentSlide + 1) % avaliableSlides.length;
-};
+    if (currentActiveElement) {
+      currentActiveElement.classList.remove("active_slide");
+    }
 
-handleCarousel();
-setInterval(handleCarousel, 7000);
+    const currentSlideElement = this.#avaliableSlides[this.#currentSlide];
+    currentSlideElement.classList.add("active_slide");
 
+    this.#currentSlide =
+      (this.#currentSlide + 1) % this.#avaliableSlides.length;
+  }
+}
+
+const carouselHandler = new CarouselHandler("carousel_slides");
