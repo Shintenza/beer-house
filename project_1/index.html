@@ -12,9 +12,11 @@
 
   <link rel="stylesheet" href="./css/index.css" />
   <link rel="stylesheet" href="./css/animations.css" />
+  <link rel="stylesheet" href="./css/carousel.css" />
   <script src="https://kit.fontawesome.com/18ab740b53.js" crossorigin="anonymous"></script>
   <script src="./js/index.js" defer></script>
   <script src="./js/menu.js" defer></script>
+  <script src="./js/carousel.js" defer></script>
 </head>
 
 <body>
@@ -160,13 +162,19 @@
       </div>
     </section>
 
-    <section>
+    <section class="beers_section">
       <div class="beers_container">
         <div class="beers_title">
           <h2>Nasze najpopularniejsze piwa</h2>
         </div>
 
         <div class="beers_imgs">
+        <button class="next_btn">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <button class="prev_btn">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
           <div class="beer_card">
             <div class="beer_card_img">
               <img src="./images/beer_2.jpg" alt="beer photo" />
@@ -220,6 +228,35 @@
                     <i class="fa-solid fa-face-grin-tongue-squint"></i> IBU:
                   </div>
                   <div class="right">15</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="beer_card">
+            <div class="beer_card_img">
+              <img src="./images/beer_1.jpg" alt="beer photo" />
+            </div>
+            <div class="beer_card_details">
+              <h3>BudLight</h3>
+              <ul>
+                <li>
+                  <div class="left">
+                    <i class="fa-solid fa-beer-mug-empty"></i> Rodzaj:
+                  </div>
+                  <div class="right">Jasne</div>
+                </li>
+                <li>
+                  <div class="left">
+                    <i class="fa-solid fa-percent"></i> Alkohol:
+                  </div>
+                  <div class="right">4.2%</div>
+                </li>
+                <li>
+                  <div class="left">
+                    <i class="fa-solid fa-face-grin-tongue-squint"></i> IBU:
+                  </div>
+                  <div class="right">9</div>
                 </li>
               </ul>
             </div>

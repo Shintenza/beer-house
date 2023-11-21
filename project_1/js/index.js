@@ -44,7 +44,6 @@ class appearOnScroll {
   #createObserver() {
     this.#observer = new IntersectionObserver(
       (entries) => {
-        console.log(entries);
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.toggle("show", entry.isIntersecting);
@@ -52,7 +51,7 @@ class appearOnScroll {
           }
         });
       },
-      { threshold: 0.5 },
+      { threshold: 0.4 },
     );
   }
 
