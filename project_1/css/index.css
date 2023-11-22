@@ -354,8 +354,8 @@ footer {
   margin-bottom: 15px;
 }
 
-.beers_title > h2,
-.features_title > h2 {
+.beers_title > h1,
+.features_title > h1 {
   font-size: 2.2rem;
 }
 

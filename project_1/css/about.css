@@ -1,0 +1,144 @@
+:root {
+  --gold: #f3bb00;
+  --gray-dark: #131313;
+  --gray-lighter: #1d1d1d;
+  --gray-light: #292929;
+}
+
+.awards_section,
+.location_section,
+.team_section,
+.history_section {
+  padding: 20px 20px;
+
+}
+
+.awards_title,
+.location_title,
+.team_title,
+.history_title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 10px;
+}
+
+.history_section p {
+  line-height: 1.5;
+  text-align: justify;
+}
+
+
+.history_section img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+  /* border-radius: 20px; */
+  position: relative;
+}
+
+.history_image_wrapper {
+  position: relative;
+}
+
+.history_image_wrapper::before {
+  position: absolute;
+  content: "Chatka Browaru BeerHouse w której wszystko się zaczęło";
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  font-size: 1.3rem;
+  z-index: 2;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: 300ms opacity ease-in-out;
+}
+
+.history_image_wrapper:hover::after {
+  opacity: 0.7;
+}
+.history_image_wrapper:hover::before {
+  opacity: 1;
+}
+
+.history_image_wrapper::after { 
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  z-index: 1;
+  /* border-radius: 20px; */
+  transition: 300ms opacity ease-in-out;
+}
+
+.team_card {
+  margin-bottom: 10px;
+}
+
+.team_card img {
+  width: 100%;
+}
+
+.team_card_desc > h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.location_section iframe{
+  width: 100%;
+  min-height: 50vh;
+}
+
+.awards_grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(1fr);
+  gap: 10px;
+}
+.award_item {
+  background-color: var(--gray-light);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.award_title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .awards_section,
+  .location_section,
+  .team_section,
+  .history_section {
+    padding: 40px 120px;
+  }
+  .team_cards {
+    display: flex;
+    gap: 10px;
+  }
+  .team_card {
+    flex: 1;
+  }
+
+  .history_image_wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .history_image_wrapper img {
+    height: 100vh;
+  }
+  .awards_grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
