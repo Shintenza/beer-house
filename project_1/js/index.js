@@ -32,33 +32,41 @@ class appearOnScroll {
   #observer = null;
   #elements = null;
   #startingClass = "";
+  #edgeThresholdClass = false;
 
-  constructor(elementsName, startingClass) {
+  constructor(elementsName, startingClass, edgeThresholdClass=null) {
     this.#elements = document.querySelectorAll(`.${elementsName}`);
     this.#startingClass = startingClass;
+    this.#edgeThresholdClass = edgeThresholdClass;
     this.#makeElementsHidden();
     this.#createObserver();
     this.#addObserverToElements();
   }
 
   #createObserver() {
-    this.#observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.toggle("show", entry.isIntersecting);
-            this.#observer.unobserve(entry.target);
-          }
-        });
-      },
+    this.#observer = new IntersectionObserver((e) => this.#observerCallback(e),
       { threshold: 0.4 },
     );
   }
 
+  #observerCallback(entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.toggle("show", entry.isIntersecting);
+        this.#observer.unobserve(entry.target);
+      }
+    })
+  }
+
   #addObserverToElements() {
-    this.#elements.forEach((element) => {
-      this.#observer.observe(element);
-    });
+    for (const element of this.#elements) {
+      if (element.classList.contains(this.#edgeThresholdClass)) {
+        const updatedObserver = new IntersectionObserver((e) => this.#observerCallback(e), { threshold: 0.2 });
+        updatedObserver.observe(element);
+      } else {
+        this.#observer.observe(element);
+      }
+    }
   }
 
   #makeElementsHidden() {
@@ -70,4 +78,5 @@ class appearOnScroll {
 
 const carouselHandler = new CarouselHandler("carousel_slides");
 const featuresAppear = new appearOnScroll("features_ft", "slide_from_left");
-const beersAppear = new appearOnScroll("beer_card", "slide_from_right");
+const visitContainer = new appearOnScroll("visit_container", "slide_from_left");
+const beersAppear = new appearOnScroll("beer_card", "slide_from_right", "edgeCase");

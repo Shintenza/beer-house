@@ -1,3 +1,10 @@
+:root {
+  --gold: #f3bb00;
+  --gray-dark: #131313;
+  --gray-lighter: #1d1d1d;
+  --gray-light: #292929;
+}
+
 .slide_from_left {
   opacity: 0;
   transform: translateX(-50%);
@@ -13,4 +20,25 @@
 .show {
   opacity: 1;
   transform: translateX(0);
+}
+
+.header_nav_item {
+  position: relative;
+}
+
+.header_nav_item::before {
+  position: absolute;
+  content: " ";
+  left: 15px;
+  bottom: -5px;
+  height: 3px;
+  width: 0;
+  background-color: var(--gold);
+  opacity: 0;
+  transition: 200ms all ease-in-out;
+}
+
+.header_nav_item:hover::before {
+  width: 60%;
+  opacity: 1;
 }
