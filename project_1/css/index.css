@@ -374,8 +374,12 @@ footer {
   filter: grayscale(100%) invert(100%) contrast(83%) brightness(0.7);
 }
 
+.visit_section {
+  background-color: var(--gray-lighter);
+}
 .visit_container {
   display: flex;
+  background-color: var(--gray-lighter);
   min-height: 60vh;
   padding: 20px 20px;
 }
@@ -432,6 +436,7 @@ footer {
   border-radius: 30px;
   background-color: var(--gray-lighter);
   transition: 200ms background-color ease-in-out;
+  color: white;
 }
 
 .visit_text button:hover {

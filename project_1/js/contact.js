@@ -1,3 +1,4 @@
+const DESTINATION_ADDRESS = "kam.kuziora@gmail.com";
 class ContactFormHandler {
   #emailAddress = "";
   #messageTitle = "";
@@ -122,7 +123,7 @@ class ContactFormHandler {
       this.#isSending = true;
       this.#clearMessages();
       const response = await fetch(
-        `https://formsubmit.co/ajax/kam.kuziora@gmail.com`,
+        `https://formsubmit.co/ajax/${DESTINATION_ADDRESS}`,
         {
           method: "POST",
           headers: {

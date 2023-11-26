@@ -5,6 +5,10 @@
   --gray-light: #292929;
 }
 
+body {
+  background-color: var(--gray-lighter);
+}
+
 .awards_section,
 .location_section,
 .team_section,
