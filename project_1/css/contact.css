@@ -5,6 +5,10 @@
   --gray-light: #292929;
 }
 
+.hidden {
+  display: none!important;
+}
+
 .contact_form_container {
   background-color: var(--gray-lighter);
   display: flex;
@@ -91,6 +95,26 @@ textarea {
   color: white !important;
 }
 
+.loader {
+    width: 24px;
+    height: 24px;
+    border: 3px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
 @media only screen and (min-width: 768px) {
   .contact_form {
     width: 50vw;
@@ -99,4 +123,4 @@ textarea {
   .contact_form_container {
     padding: 40px 0;
   }
-}
+};

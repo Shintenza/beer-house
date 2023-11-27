@@ -115,10 +115,13 @@ class ContactFormHandler {
     this.#updateValues();
     this.#clearMessages();
     this.#validateForm();
+    const spinnerElement = this.#submitBtnElement.querySelector(".loader");
+    const sendTextElement = this.#submitBtnElement.querySelector(".send");
 
     if (this.#isCorrect) {
       this.#submitBtnElement.classList.add("active_btn");
-      this.#submitBtnElement.innerText = "Wysyłanie...";
+      spinnerElement.classList.remove("hidden");
+      sendTextElement.classList.add("hidden");
 
       this.#isSending = true;
       this.#clearMessages();
@@ -145,7 +148,8 @@ class ContactFormHandler {
           "Pomyślnie wysłano wiadomość",
         );
         this.#submitBtnElement.classList.remove("active_btn");
-        this.#submitBtnElement.innerText = "Wyślij";
+        spinnerElement.classList.add("hidden");
+        sendTextElement.classList.remove("hidden");
       }
       this.#isSending = false;
     }
