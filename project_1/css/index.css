@@ -254,7 +254,7 @@ footer {
   padding: 40px;
   display: flex;
   width: 100vw;
-  padding: 10 40px;
+  padding: 10px 40px;
   flex-direction: column;
 }
 
@@ -443,7 +443,54 @@ footer {
   background-color: var(--gold);
 }
 
+.reviews_container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  margin: 20px 20px;
+  background-color: var(--gray-light);
+  margin-bottom: 20px;
+}
+
+.review_author {
+  display: flex;
+  margin-bottom: 15px;
+  gap: 15px;
+  align-items: center;
+}
+
+.review_author_text span {
+  font-weight: 300;
+}
+
+.review_card {
+  padding: 10px;
+  flex-grow:1;
+}
+
+.review_author img {
+  display: block;
+  border-radius: 50%;
+  width: 15%;
+  flex-shrink: 0;
+}
+
+.review_text {
+  text-align: justify;
+}
+
 @media only screen and (min-width: 768px) {
+  .reviews_container {
+    flex-direction: row;
+    padding: 40px 120px;
+    flex-wrap: wrap;
+  }
+  .review_card {
+    flex-shrink: 0;
+    flex-basis: 260px;
+    padding: 0;
+  }
+
   .main_nav {
     display: flex;
     justify-content: start;

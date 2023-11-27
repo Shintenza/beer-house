@@ -32,12 +32,12 @@ class appearOnScroll {
   #observer = null;
   #elements = null;
   #startingClass = "";
-  #edgeThresholdClass = false;
+  #threshold = 0.5;
 
-  constructor(elementsName, startingClass, edgeThresholdClass=null) {
+  constructor(elementsName, startingClass, threshold=0.5) {
+    this.#threshold = threshold;
     this.#elements = document.querySelectorAll(`.${elementsName}`);
     this.#startingClass = startingClass;
-    this.#edgeThresholdClass = edgeThresholdClass;
     this.#makeElementsHidden();
     this.#createObserver();
     this.#addObserverToElements();
@@ -45,7 +45,7 @@ class appearOnScroll {
 
   #createObserver() {
     this.#observer = new IntersectionObserver((e) => this.#observerCallback(e),
-      { threshold: 0.4 },
+      { threshold: this.#threshold },
     );
   }
 
@@ -60,12 +60,7 @@ class appearOnScroll {
 
   #addObserverToElements() {
     for (const element of this.#elements) {
-      if (element.classList.contains(this.#edgeThresholdClass)) {
-        const updatedObserver = new IntersectionObserver((e) => this.#observerCallback(e), { threshold: 0.2 });
-        updatedObserver.observe(element);
-      } else {
-        this.#observer.observe(element);
-      }
+      this.#observer.observe(element);
     }
   }
 
@@ -78,5 +73,6 @@ class appearOnScroll {
 
 const carouselHandler = new CarouselHandler("carousel_slides");
 const featuresAppear = new appearOnScroll("features_ft", "slide_from_left");
-const visitContainer = new appearOnScroll("visit_container", "slide_from_left");
-const beersAppear = new appearOnScroll("beer_card", "slide_from_right", "edgeCase");
+const beersAppear = new appearOnScroll("beers_container", "slide_from_right", 0.2);
+const reviesAppear = new appearOnScroll("reviews_container", "slide_from_left");
+const visitContainer = new appearOnScroll("visit_container", "slide_from_right", 0.3);
