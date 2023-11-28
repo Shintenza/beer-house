@@ -293,7 +293,7 @@ footer {
   padding-top: 6px;
 }
 
-.footer_subcontainer ul > li > i {
+.footer_subcontainer ul > li > a > i {
   list-style: none;
   padding-right: 5px;
   color: var(--gold);
@@ -308,6 +308,19 @@ footer {
 .footer_quote {
   display: block;
   width: 30%;
+}
+
+address,
+address a,
+.footer_socials  a {
+  text-decoration: none;
+  color: white;
+  font-style: normal;
+}
+
+address > ul > li > i {
+  margin-right: 5px; 
+  color: var(--gold);
 }
 
 /* features section styles */
