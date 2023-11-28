@@ -1,4 +1,12 @@
+/**
+ * @type {string} - email address where the message is going to be sent
+ */
 const DESTINATION_ADDRESS = "kam.kuziora@gmail.com";
+
+/**
+ * class responsible for handling a contact form
+ * @class
+ */
 class ContactFormHandler {
   #emailAddress = "";
   #messageTitle = "";
@@ -14,6 +22,13 @@ class ContactFormHandler {
   #isCorrect = true;
   #isSending = false;
 
+  /**
+  * @constructor
+  * @type {string} - email input ID
+  * @type {string} - message title input ID
+  * @type {string} - message content input ID
+  * @type {string} - submit button ID 
+  */
   constructor(emailElemId, titleElemId, textElemId, submitBtnId) {
     this.#emailElement = document.getElementById(emailElemId);
     this.#titleElement = document.getElementById(titleElemId);
@@ -37,12 +52,20 @@ class ContactFormHandler {
     );
   }
 
+  /**
+   * method updating class atribiutes to the current inputs values
+   * @method
+   */
   #updateValues() {
     this.#emailAddress = this.#emailElement.value;
     this.#messageTitle = this.#titleElement.value;
     this.#messageContent = this.#messageElement.value;
   }
 
+  /**
+   * method removing all feedback elements attached to the form
+   * @method
+   */
   #clearMessages() {
     const parentNode = this.#emailElement.parentNode;
 
@@ -65,12 +88,24 @@ class ContactFormHandler {
       }
     }
   }
+  /**
+   * method attaching a feedback message containing positive result
+   * @method
+   * @param {Element} - element after the message is going to be attached
+   * @param {string} - success message content
+   */
   #appendSuccess(element, successMsg) {
     this.#formFeedbackElement.classList.add("success_msg");
     this.#formFeedbackElement.innerText = successMsg;
     element.after(this.#formFeedbackElement);
   }
 
+  /**
+   * method attaching a feedback message containing negative result
+   * @method
+   * @param {Element} - element after the message is going to be attached
+   * @param {string} - error message content
+   */
   #appendError(element, errorMsg) {
     element.classList.add("error_border");
     this.#formFeedbackElement.classList.add("error_msg");
@@ -78,6 +113,10 @@ class ContactFormHandler {
     element.after(this.#formFeedbackElement);
   }
 
+  /**
+   * method responsible for form validation (with regex email checking)
+   * @method
+   */
   #validateForm() {
     this.#isCorrect = true;
 
@@ -109,6 +148,12 @@ class ContactFormHandler {
     }
   }
 
+  /**
+   * method sending a post request with form content to the formsubmit.co endpoint
+   * @async
+   * @method
+   * @param {Event} - callback event
+   */
   async handleSubmit(e) {
     e.preventDefault();
     if (this.#isSending) return;

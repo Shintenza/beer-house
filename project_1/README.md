@@ -32,7 +32,7 @@ photo is from which website, because I have not saved this information
 
 ## Starting a project
 This is a simple static website so you can clone the repository and open `index.html` file using your favourite browser. With this approach you wouldn't be able to use
-the contact form it requires to run the project on a server. 
+the contact form because it requires to run the project on a server. 
 To solve this problem you can use tool like `serve`; all you need to do is to navigate to the cloned repo and run:
 
 > sudo npm install -g serve<br>
