@@ -15,13 +15,20 @@ The main purpose of the project is to use HTML/CSS/JS in practice to create stat
 - CSS Flexbox/Grid usage
 
 ## Used technologies
-|  Technology   | Purpose       |
-| ------------- | ------------- |
-|  HTML5        | content structure and organization; markup language  |
-|  CSS          | look and feel; responsive design  |
-|  JS           | contact form handling, animations, mobile hamburger menu, image carousels |
-|  [FormSubmit](https://formsubmit.co/) | backend API responsible for sending emails |
-|  [GoogleMaps](https://www.google.pl/maps/preview) | for map embedding|
+|  Technology                                       | Purpose                                                                   |
+|---------------------------------------------------|---------------------------------------------------------------------------|
+|  HTML5                                            | content structure and organization; markup language                       |
+|  CSS                                              | look and feel; responsive design                                          |
+|  JS                                               | contact form handling, animations, mobile hamburger menu, image carousels |
+|  [FormSubmit](https://formsubmit.co/)             | backend API responsible for sending emails                                |
+|  [GoogleMaps](https://www.google.pl/maps/preview) | for map embedding                                                         |
+|  [FontAwesome](https://fontawesome.com/)          | icon library                                                              |
+
+## Design ideas and images sources
+- Creating this website, I was inspired by the project that can be found at this [link](https://www.behance.net/gallery/96688989/study-project-beer-web-site).
+- SVGs used in this project comes from [Svgrepo](https://www.svgrepo.com)
+- stock images comes from sites like [Pexels](https://www.pexels.com/), [Unsplash](https://unsplash.com/), [Freepek](https://pl.freepik.com/).Unfortunately, I cannot say which
+photo is from which website, because I have not saved this information 
 
 ## Starting a project
 This is a simple static website so you can clone the repository and open `index.html` file using your favourite browser. With this approach you wouldn't be able to use
