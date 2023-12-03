@@ -16,6 +16,7 @@
 body {
   font-family: "Lato", sans-serif;
   color: white;
+  background-color: var(--gray-dark);
 }
 
 .root {
@@ -454,6 +455,10 @@ address > ul > li > i {
 
 .visit_text button:hover {
   background-color: var(--gold);
+}
+
+.review_section {
+  background-color: var(--gray-dark);
 }
 
 .reviews_container {
