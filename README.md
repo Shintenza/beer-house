@@ -40,3 +40,6 @@ To solve this problem you can use tool like `serve`; all you need to do is to na
 
 After doing it you can visit the site on `localhost:3000`. Also remember to change the `DESTINATION_ADDRESS` variable in the `contact.js` file to your email that is going
 to receive messages from the contact from.
+
+## UML Class diagram
+![classes](./class_diagrams.png)

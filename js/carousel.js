@@ -3,7 +3,7 @@
  * @class
  */
 class Carousel {
-  currentCarousellSize = 4;
+  currentCarouselSize = 4;
   startingImgIndex = 0;
   slidesPadding = 0;
 
