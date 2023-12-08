@@ -431,7 +431,11 @@ address > ul > li > i {
 }
 
 .visit_text li {
-  margin: 6px 0;
+  margin: 10px 0;
+}
+
+.visit_text li span {
+  font-weight: bold;
 }
 
 .visit_text li i {
